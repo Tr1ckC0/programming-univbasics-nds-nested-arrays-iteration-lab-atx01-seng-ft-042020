@@ -7,12 +7,14 @@ def join_ingredients(src)
   # "I love (inner array element 0) and (inner array element 1) on my pizza""
   # As such, there should be a new String for each inner array, or pair
   love_pizza_toppings = []
+
   index = 0
     while src[index] do
       pizza_string = "I love #{src[index][0]} and #{src[index][1]} on my pizza"
       love_pizza_toppings << pizza_string
       index += 1
     end
+
   love_pizza_toppings
 end
 
