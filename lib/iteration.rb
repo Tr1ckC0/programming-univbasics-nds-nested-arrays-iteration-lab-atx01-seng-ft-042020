@@ -42,11 +42,10 @@ def total_even_pairs(src)
   # the number was even. Review the operator documentation if you've forgotten
   # this!
   total_even_pairs = 0
-  outter_index = 0
+
+  i = 0
   while src[outter_index] do
-    if src[outter_index][0].even? && src[outter_index][1].even?
-      total_even_pairs += (src[outter_index][0] + src[outter_index][1])
-    end
+    total_even_pairs += (src[i][0] + src[i][1]) if src[i][0].even? && src[i][1].even?
     outter_index += 1
   end
   total_even_pairs
