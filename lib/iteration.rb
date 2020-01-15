@@ -23,15 +23,13 @@ def find_greater_pair(src)
   # Produce a new Array that contains the larger number of each of the pairs
   # that are in the inner Arrays
   greater_numbers = []
-  outter_index = 0
-  while src[outter_index] do
-    if src[outter_index][1] > src[outter_index][0]
-      greater_numbers << src[outter_index][1]
-    else
-      greater_numbers << src[outter_index][0]
-    end
-    outter_index += 1
+  
+  i = 0
+  while src[i] do
+    greater_numbers << (src[i][0] < src[i][1] ? src[i][1] : src[i][0])
+    i += 1
   end
+  
   greater_numbers
 end
 
